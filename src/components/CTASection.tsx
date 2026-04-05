@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Megaphone } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const CTASection = () => {
   return (
@@ -23,20 +24,24 @@ const CTASection = () => {
               OrigoAid gives you the tools to rally support from across Bangladesh and beyond.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button
-                size="lg"
-                variant="secondary"
-                className="gap-2 text-base px-8"
-              >
-                Start a Campaign <ArrowRight size={18} />
-              </Button>
-              <Button
-                size="lg"
-                variant="ghost"
-                className="text-base px-8 text-primary-foreground hover:bg-primary-foreground/10"
-              >
-                Learn More
-              </Button>
+              <Link to="/start-campaign">
+                <Button
+                  size="lg"
+                  variant="secondary"
+                  className="gap-2 text-base px-8"
+                >
+                  Start a Campaign <ArrowRight size={18} />
+                </Button>
+              </Link>
+              <a href="#how-it-works">
+                <Button
+                  size="lg"
+                  variant="ghost"
+                  className="text-base px-8 text-primary-foreground hover:bg-primary-foreground/10"
+                >
+                  Learn More
+                </Button>
+              </a>
             </div>
           </div>
         </div>
