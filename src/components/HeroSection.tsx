@@ -1,6 +1,7 @@
 import heroBg from "@/assets/hero-bg.jpg";
 import { Button } from "@/components/ui/button";
 import { Heart, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
@@ -32,16 +33,20 @@ const HeroSection = () => {
           </p>
 
           <div className="flex flex-wrap gap-4 pt-2">
-            <Button size="lg" className="gap-2 text-base px-8">
-              Explore Campaigns <ArrowRight size={18} />
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="text-base px-8 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"
-            >
-              Start Fundraising
-            </Button>
+            <a href="#campaigns">
+              <Button size="lg" className="gap-2 text-base px-8">
+                Explore Campaigns <ArrowRight size={18} />
+              </Button>
+            </a>
+            <Link to="/start-campaign">
+              <Button
+                size="lg"
+                variant="outline"
+                className="text-base px-8 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"
+              >
+                Start Fundraising
+              </Button>
+            </Link>
           </div>
 
           <div className="flex gap-8 pt-6">
